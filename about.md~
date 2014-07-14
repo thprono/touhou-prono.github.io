@@ -1,0 +1,28 @@
+---
+layout: page
+title: About
+permalink: /about/
+---
+
+Touhou Prono was founded in 2014 January 26 in the event of blue_bear_94's (`#00000000/IWant2PlayTouhou`) temporary ban from Omnimaga. It strives to be a programming community free from incompetent nineballs who ask stupid questions and say other stupid stuff.
+
+For the first six months of its life, Touhou Prono was a sleeping anarchy, but towards late June, `IWant2PlayTouhou`'s interest in the group rose again and the day before Bastille Day, the Code came into force.
+
+### Okay, but what the fuck does Touhou Prono mean?
+
+Touhou Prono should be regarded as only one word, not two. "Touhou" in that name means fuck all, and so does "Prono" (which was originally going to be "Porno", so I could trick others into thinking that it's NSFW when it's actually not).
+
+### Joining
+
+There are two steps to joining this wonderful group! If you're interested:
+
+1. Click the **Rules** button at the top, download at least the `main.pdf` file, and read it carefully.
+2. If you have no problems with the rules, click the **Forum** button to the right of the **Rules** button. It will take you to a Google Groups page, where you can ask to join. Answer the basic questions and `IWant2PlayTouhou` will let you in.
+
+### Members
+
+{% for member in site.data.members %}
+  `[#{{ member.id }}] {{ member.user }}` ([github](https://github.com/{{ member.github }})) {% if member.role %}: {{member.role}} {% endif %}
+{% endfor %}
+
+**Note**: The number in brackets is a 32-bit identifier assigned to Members. Each Member listed will also have a GitHub link, which is, by the way, required for all of them.

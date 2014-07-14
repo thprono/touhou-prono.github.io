@@ -1,0 +1,146 @@
+---
+layout: post
+title:  "Welcome to Touhou Prono!"
+date:   2014-07-13 20:26:48
+categories: welcome
+---
+
+Welcome to Touhou Prono, and this site in particular!
+
+{% highlight scala %}
+def printHi(name: String) =
+  println(s"Hi, $name")
+printHi("Tom")
+// prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
+
+{% highlight c %}
+#include <stdio.h>
+
+void printHi(const char* name) {
+  printf("Hi, %s", name);
+}
+
+int main() {
+  printHi("Tom")
+  // prints 'Hi, Tom' to STDOUT
+}
+{% endhighlight %}
+
+Apologies for not being able to syntax highlight Bag code.
+
+    Let printHi := λ
+     $:hluna("Hi, " + #1
+    Endλ
+    printHi("Tom
+    _ prints 'Hi, Tom' to the window
+
+*in prgmZPH*
+
+    Disp "HI, "+Ans
+
+*in prgmMAIN*
+
+    "TOM
+    prgmZPH
+
+Fuck Java, but I'll do Java anyway.
+
+*org/thp/hi/HiPrinter.java*
+
+{% highlight java %}
+package org.thp.hi;
+
+public class HiPrinter {
+  private String name;
+  private Printstream out;
+  public HiPrinter(String name, PrintStream out) {
+    this.name = name;
+    this.out = out;
+  }
+  public printHi() {
+    out.println(toString());
+  }
+  public String getName() {
+    return name;
+  }
+  public String toString() {
+    return "Hi, " + name
+  }
+  public boolean equals(Object that) {
+    if (that != null && (that instanceOf HiPrinter)) {
+      HiPrinter thp = (HiPrinter) that
+      return name.equals(thp.name) && out.equals(thp.out);
+    }
+  }
+  public int hashCode() {
+    int nameHash = (name == null) ? 101 : 43 * name.hashCode();
+    int outHash = (out == null) ? 31 : 79 * out.hashCode();
+  }
+}
+{% endhighlight %}
+
+*org/thp/hi/HiPrinterBuilder.java*
+
+{% highlight java %}
+package org.thp.hi;
+
+public class HiPrinterBuilder {
+  private String name;
+  private Printstream out;
+  public String getName() {
+    return name;
+  }
+  public void setName(String name) {
+    this.name = name;
+  }
+  public PrintStream getOut() {
+    return out;
+  }
+  public void setOut(PrintStream out) {
+    this.out = out;
+  }
+  public HiPrinter getHP() {
+    return new HiPrinter(name, out);
+  }
+  public String toString() {
+    return "HPB: " + name + "; " + out
+  }
+  public boolean equals(Object that) {
+    if (that != null && (that instanceOf HiPrinterBuilder)) {
+      HiPrinterBuilder thpb = (HiPrinterBuilder) that
+      return name.equals(thpb.name) && out.equals(thpb.out);
+    }
+  }
+  public int hashCode() {
+    int nameHash = (name == null) ? 101 : 43 * name.hashCode();
+    int outHash = (out == null) ? 31 : 79 * out.hashCode();
+  }
+}
+{% endhighlight %}
+
+*org/thp/hi/test/HiTest.java*
+
+{% highlight java %}
+package org.thp.hi.test;
+
+import org.thp.hi;
+
+public class HiTest {
+  public void main(String[] args) {
+    try {
+      String name = args[0];
+      HiPrinterBuilder hpb = new HiPrinterBuilder();
+      hpb.setName(args[0]);
+      hpb.setOut(System.out);
+      hpb.getHP().printHi();
+    } catch (ArrayIndexOutOfBoundsException ae) {
+      System.out.println("Please provide a name.")
+    }
+  }
+}
+{% endhighlight %}
+
+    java org/thp/hi/test/HiTest.class Tom
+
+If you're not initiated yet, check out the relevant material with links at the top of the page!

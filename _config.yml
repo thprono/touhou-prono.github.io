@@ -1,0 +1,16 @@
+# Site settings
+title: Touhou Prono <sup>BETA</sup>
+email: tkook11@gmail.com
+description: "The official Touhou Prono Website"
+baseurl: ""
+url: "http://yourdomain.com"
+twitter_username: melranosF_
+github_username:  bluebear94
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+encoding: utf-8
+paginate: 10
+paginate_path: "blog/page:num"

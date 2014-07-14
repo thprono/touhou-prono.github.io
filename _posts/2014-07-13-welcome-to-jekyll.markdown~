@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "Welcome to Touhou Prono!"
+date:   2014-07-13 20:26:48
+categories: welcome
+---
+
+Welcome to Touhou Prono, and this site in particular!
+
+{% highlight scala %}
+def printHi(name: String) =
+  println(s"Hi, $name")
+printHi("Tom")
+// prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
+
+If you're not initiated yet, check out the relevant material with links at the top of the page!
