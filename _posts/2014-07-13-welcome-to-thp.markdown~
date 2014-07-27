@@ -106,6 +106,12 @@ public class HiPrinterBuilder {
   public String toString() {
     return "HPB: " + name + "; " + out
   }
+  public boolean equals(Object that) {
+    if (that != null && (that instanceOf HiPrinterBuilder)) {
+      HiPrinterBuilder thpb = (HiPrinterBuilder) that
+      return name.equals(thpb.name) && out.equals(thpb.out);
+    }
+  }
   public int hashCode() {
     int nameHash = (name == null) ? 101 : 43 * name.hashCode();
     int outHash = (out == null) ? 31 : 79 * out.hashCode();

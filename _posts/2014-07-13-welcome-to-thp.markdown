@@ -76,6 +76,7 @@ public class HiPrinter {
   public int hashCode() {
     int nameHash = (name == null) ? 101 : 43 * name.hashCode();
     int outHash = (out == null) ? 31 : 79 * out.hashCode();
+    return nameHash ^ outHash;
   }
 }
 {% endhighlight %}
@@ -115,6 +116,7 @@ public class HiPrinterBuilder {
   public int hashCode() {
     int nameHash = (name == null) ? 101 : 43 * name.hashCode();
     int outHash = (out == null) ? 31 : 79 * out.hashCode();
+    return nameHash ^ outHash;
   }
 }
 {% endhighlight %}
